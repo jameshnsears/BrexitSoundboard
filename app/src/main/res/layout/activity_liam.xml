@@ -1,159 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="na.brexitsoundboard.LiamActivityAbstract">
+    android:background="#FFFFFF"
+    tools:context="com.github.jameshnsears.brexitsoundboard.person.ActivityLiam">
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp">
+        android:layout_marginRight="8dp"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        android:scrollbarThumbVertical="@color/colorBlue">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/buttonLiamBlamingTheMedia"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_BlamingTheMedia" />
-
-            <Button
-                android:id="@+id/buttonLiamChickenObsessedMedia"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_ChickenObsessedMedia" />
+            android:orientation="vertical"
+            android:padding="5dp">
 
             <Button
                 android:id="@+id/buttonLiamCitizensFirstNotPolitics"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_liam_CitizensFirstNotPolitics" />
 
             <Button
                 android:id="@+id/buttonLiamEasiestInHumanHistory"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_liam_EasiestInHumanHistory" />
 
             <Button
-                android:id="@+id/buttonLiamFullConfidenceInPM"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_FullConfidenceInPM" />
-
-            <Button
-                android:id="@+id/buttonLiamAccessToEu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_HaveToMaintainAccessToEU" />
-
-            <Button
-                android:id="@+id/buttonLiamHowWeConductOurselves"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_HowWeConductOurselves" />
-
-            <Button
-                android:id="@+id/buttonLiamIntemperateLanguage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_IntemperateLanguage" />
-
-            <Button
-                android:id="@+id/buttonLiamIwantGovernmentsDeal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_IWantTheGovermentsDeal" />
-
-            <Button
-                android:id="@+id/buttonLiamNotHavingADealWouldBeBad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_NotHavingADealWouldBeBad" />
-
-            <Button
-                android:id="@+id/buttonLiamOldMenOfBrussels"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_OldMenOfBrussels" />
-
-            <Button
-                android:id="@+id/buttonLiamReachAgreementCivilly"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_ReachAgreementCivilly" />
-
-            <Button
-                android:id="@+id/buttonLiamScleroticInwardLookingEurope"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_ScleroticInwardLookingEurope" />
-
-            <Button
-                android:id="@+id/buttonLiamRuleTakersSellout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_Sellout" />
-
-            <Button
-                android:id="@+id/buttonLiamSelfDefeating"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_SelfDefeatingPessamists" />
-
-            <Button
-                android:id="@+id/buttonLiamShockTherapyRequiredForEu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_ShockTherapyRequiredForEU" />
-
-            <Button
-                android:id="@+id/buttonLiamStealingBrexit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_StealingBrexit" />
-
-            <Button
-                android:id="@+id/buttonLiamThisIsNotJustAboutEurope"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_liam_ThisIsNotJustAboutEurope" />
-
-            <Button
                 android:id="@+id/buttonLiamTooLazyAndTooFat"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_liam_TooLazyAndTooFat" />
 
             <Button
-                android:id="@+id/buttonLiamTremendousOpportunitiesOutThere"
+                android:id="@+id/buttonLiamThisIsNotJustAboutEurope"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/button_liam_TremendousOpportunitiesOutThere" />
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_ThisIsNotJustAboutEurope" />
+
+            <Button
+                android:id="@+id/buttonLiamOldMenOfBrussels"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_OldMenOfBrussels" />
+
+            <Button
+                android:id="@+id/buttonLiamShockTherapyRequiredForEu"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_ShockTherapyRequiredForEU" />
+
+            <Button
+                android:id="@+id/buttonLiamSelfDefeating"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_SelfDefeatingPessimists" />
+
+            <Button
+                android:id="@+id/buttonLiamChickenObsessedMedia"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_ChickenObsessedMedia" />
+
+            <Button
+                android:id="@+id/buttonLiamAccessToEu"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_HaveToMaintainAccessToEU" />
+
+            <Button
+                android:id="@+id/buttonLiamNotHavingADealWouldBeBad"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_NotHavingADealWouldBeBad" />
+
+            <Button
+                android:id="@+id/buttonLiamFullConfidenceInPM"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_FullConfidenceInPM" />
+
+            <Button
+                android:id="@+id/buttonLiamRuleTakersSellout"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_Sellout" />
+
+            <Button
+                android:id="@+id/buttonLiamStealingBrexit"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_StealingBrexit" />
 
             <Button
                 android:id="@+id/buttonLiamWeCantBeBlackmailed"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_liam_WeCantBeBlackmailed" />
+
+            <Button
+                android:id="@+id/buttonLiamThinkOfTheConsequences"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_liam_ThinkOfTheConsequences" />
+
         </LinearLayout>
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

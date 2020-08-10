@@ -1,96 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="na.brexitsoundboard.TheresaActivityAbstract">
+    android:background="#FFFFFF"
+    tools:context="com.github.jameshnsears.brexitsoundboard.person.ActivityTheresa">
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp">
+        android:layout_marginRight="8dp"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        android:scrollbarThumbVertical="@color/colorBlue">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/buttonTheresaWeShouldStayInTheEu"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_theresa_WeShouldStayInsideEU" />
+
+            <Button
+                android:id="@+id/buttonTheresaCitizenOfNowhere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_theresa_CitizenOfNowhere"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresAPlan"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_theresa_APlanForBritain" />
 
             <Button
                 android:id="@+id/buttonTheresaBrexitMeansBrexit"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_theresa_BrexitMeansBrexit" />
 
             <Button
-                android:id="@+id/buttonTheresaCertainityAndClarity"
+                android:id="@+id/buttonTheresaRedWhiteAndBlueBrexit"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_theresa_RedWhiteAndBlueBrexit" />
+
+            <Button
+                android:id="@+id/buttonTheresaCertaintyAndClarity"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_theresa_CertaintyAndClarity" />
 
             <Button
-                android:id="@+id/buttonTheresaEveryVoteForMe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/button_theresa_EveryVoteForMe" />
-
-            <Button
                 android:id="@+id/buttonTheresaNoDealBetterThanABadDeal"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_theresa_NoDealBetterThanABadDeal" />
 
             <Button
                 android:id="@+id/buttonTheresaNoNeedForAnElection"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_theresa_NoNeedForAnElection" />
 
             <Button
-                android:id="@+id/buttonTheresaRedWhiteAndBlueBrexit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/button_theresa_RedWhiteAndBlueBrexit" />
-
-            <Button
                 android:id="@+id/buttonTheresaStrongAndStableLeadership"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
                 android:text="@string/button_theresa_StrongAndStableLeadership" />
 
             <Button
-                android:id="@+id/buttonTheresaWeShouldStayInTheEu"
+                android:id="@+id/buttonTheresaNIisPartOfTheUK"
+                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/button_theresa_WeShouldStayInsideEU" />
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_theresa_NIisPartOfTheUK" />
+
+            <Button
+                android:id="@+id/buttonTheresaIWillNeverAgreeTo"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_theresa_IWillNeverAgreeTo" />
+
         </LinearLayout>
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

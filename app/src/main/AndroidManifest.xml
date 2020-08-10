@@ -1,40 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="na.brexitsoundboard">
-
-    <!-- firebase -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity" android:configChanges="orientation|screenSize">
+        <activity
+            android:name=".ActivityBrexitSoundboard"
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".BorisActivityAbstract"
-            android:label="@string/title_activity_boris" />
-        <activity
-            android:name=".LiamActivityAbstract"
-            android:label="@string/title_activity_liam" />
-        <activity
-            android:name=".DavidActivityAbstract"
-            android:label="@string/title_activity_david" />
-        <activity
-            android:name=".TheresaActivityAbstract"
-            android:label="@string/title_activity_theresa" />
+        <activity android:name=".person.ActivityBoris" />
+        <activity android:name=".person.ActivityLiam" />
+        <activity android:name=".person.ActivityDavid" />
+        <activity android:name=".person.ActivityTheresa" />
+        <activity android:name=".person.ActivityJacob" />
     </application>
-
 </manifest>

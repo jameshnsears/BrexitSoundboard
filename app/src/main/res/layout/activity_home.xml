@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:layout_margin="0dp"
+    android:layout_marginStart="0dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginEnd="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginBottom="0dp"
+    android:background="#FFFFFF"
+    tools:context="com.github.jameshnsears.brexitsoundboard.ActivityBrexitSoundboard">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbarThumbVertical="@color/colorBlue">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    app:srcCompat="@drawable/boris00" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris01" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris02" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris03" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris04" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris05" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris06" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris07"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris07" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris08"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris08" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris09"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris09" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBoris10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_boris"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/boris10" />
+
+                <TextView
+                    android:id="@+id/textViewNameBoris"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_boris"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonLiam00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_liam"
+                    app:srcCompat="@drawable/liam00" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonLiam01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_liam"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/liam01" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonLiam02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_liam"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/liam02" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonLiam03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_liam"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/liam03" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonLiam04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_liam"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/liam04" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonLiam05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_liam"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/liam05" />
+
+                <TextView
+                    android:id="@+id/textViewNameLiam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_liam"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonDavid00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_david"
+                    app:srcCompat="@drawable/david00" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonDavid01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_david"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/david01" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonDavid02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_david"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/david02" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonDavid03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_david"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/david03" />
+
+                <TextView
+                    android:id="@+id/textViewNameDavid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_david"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imageButtonMogg00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    app:srcCompat="@drawable/mogg00" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonMogg01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/mogg01" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonMogg02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/mogg02" />
+
+                <TextView
+                    android:id="@+id/textViewNameJacob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_jacob"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonTheresa00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    app:srcCompat="@drawable/theresa00" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonTheresa01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/theresa01" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonTheresa02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/theresa02" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonTheresa03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/theresa03" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonTheresa04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/theresa04" />
+
+                <TextView
+                    android:id="@+id/textViewNameTheresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_theresa"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:id="@+id/githubLogo"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="@string/footer_oss"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_github_logo" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

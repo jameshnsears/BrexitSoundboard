@@ -1,0 +1,12 @@
+<b>Featuring</b>
+&bull; Alexander Boris de Pfeffel Johnson
+&bull; Sir Liam Fox
+&bull; Sir David Davis
+&bull; Sir Jacob William Rees-Mogg
+&bull; Theresa May
+
+<b>Bonus Features</b>
+&bull; Free &amp; without Ads
+&bull; Rotating images
+&bull; Works offline
+&bull; Open Source
