@@ -1,18 +1,11 @@
 <resources>
     <string name="app_name">Brexit Soundboard</string>
 
-    <string name="install_sound">Enable Media Library integration\?</string>
-    <string name="install_menu_alarm">Alarm</string>
-    <string name="install_menu_notification">Notification</string>
-    <string name="install_menu_ringtone">Ringtone</string>
-    <string name="install_menu_confirmation">\"%s\" installed</string>
-
     <string name="button_boris">Alexander Boris de Pfeffel Johnson</string>
     <string name="button_liam">Dr Liam Fox</string>
     <string name="button_david">David Davis</string>
     <string name="button_theresa">Theresa May</string>
     <string name="button_jacob">Jacob William Rees-Mogg</string>
-    <string name="button_suggestion_box">Suggestion Box</string>
 
     <string name="button_boris_350MillionPoundsAWeek">350 Million Pounds A Week</string>
     <string name="button_boris_AllYourOptionsAreGood">All Your Options Are Good</string>
@@ -44,7 +37,8 @@
     <string name="button_boris_SandpaperingTheBarnacles">Sandpapering the Barnacles</string>
     <string name="button_boris_FacingARealProblem">Facing a Real, Real Problem</string>
     <string name="button_boris_IgnoreMerchantsOfGloom">Ignore Merchants of Gloom</string>
-
+    <string name="button_boris_brexit_and_ukraine_similar">Brexit same as Ukraine War</string>
+    <string name="button_boris_no_impediment_to_our_exports">No impediment to exports</string>
 
     <string name="button_david_AgreementWillFavourTheEU">Agreement Will Favour The EU</string>
     <string name="button_david_ConfidentOfAGoodOutcome">Confident Of A Good Outcome</string>
@@ -62,6 +56,7 @@
     <string name="button_david_TrumpMoment">Trump moment</string>
     <string name="button_david_DoNotBlameMe">Not About Blame</string>
     <string name="button_david_WeCanLookAfterOurselves">We can look after ourselves</string>
+    <string name="button_david_no_downside_to_brexit">No downside to brexit</string>
 
     <string name="button_liam_ChickenObsessedMedia">Chicken Obsessed Media</string>
     <string name="button_liam_CitizensFirstNotPolitics">Citizens First Not Politics</string>
@@ -94,6 +89,8 @@
     <string name="button_jacob_PerilsOfForecasting">Perils of Forecasting</string>
     <string name="button_jacob_FiftyYearTimescale">Fifty Year Timescale</string>
     <string name="button_jacob_HappyBritishFish">Happy British Fish</string>
+    <string name="button_jacob_brexit_daily_prayer">Daily Prayer</string>
+    <string name="button_jacob_minister_for_brexit_opportunities">Minister for Brexit Opportunities</string>
 
     <string name="footer_version">%s/%s</string>
     <string name="footer_oss">Open Source Software</string>

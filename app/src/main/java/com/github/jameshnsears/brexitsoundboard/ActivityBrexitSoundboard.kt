@@ -1,12 +1,9 @@
 package com.github.jameshnsears.brexitsoundboard
 
-import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.CompoundButton
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.github.jameshnsears.brexitsoundboard.audit.AuditEventHelper
@@ -63,7 +60,6 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
         initAuditing()
         setFooterVersion()
 
-        registerClickListenerForInstallSound()
         registerClickListenersForImageButtons()
         registerClickListenerWikipedia()
         registerClickListenerFooter()
@@ -101,7 +97,6 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
         registerButtonLiam()
         registerButtonTheresa()
         registerButtonJacob()
-        registerButtonSuggestionBox()
     }
 
     private fun registerButtonBoris() {
@@ -156,43 +151,6 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
         buttonIdsJacob.add(activityHomeBinding!!.imageButtonMogg02.id)
         registerClickListenersForButtonIds(buttonIdsJacob, ActivityJacob::class.java)
         selectedButtonIdJacob = activityHomeBinding!!.imageButtonMogg00.id
-    }
-
-    private fun registerClickListenerForInstallSound() {
-        activityHomeBinding!!.installSound.setOnCheckedChangeListener { _: CompoundButton?, _: Boolean ->
-            if (activityHomeBinding!!.installSound.isChecked && checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(
-                    arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE),
-                    BREXIT_SOUNDBOARD_EXTERNAL_STORAGE
-                )
-            }
-
-            with(getSharedPreferences(this).edit()) {
-                putBoolean(SharedPreferencesHelper.INSTALL_SOUND, activityHomeBinding!!.installSound.isChecked)
-                apply()
-            }
-        }
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
-        if (requestCode == BREXIT_SOUNDBOARD_EXTERNAL_STORAGE) {
-            activityHomeBinding!!.installSound.isChecked = grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
-            sharedPreferencesSave()
-        }
-    }
-
-    private fun registerButtonSuggestionBox() {
-        activityHomeBinding!!.imageButtonSuggestionBox.setOnClickListener {
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSfHLj5AkDLyb8fFAHtAl5AdJ1FrKE9gK5uxEnTt0J9sIOa2qQ/viewform?c=0&w=1")
-                )
-            )
-        }
     }
 
     private fun registerClickListenerWikipedia() {
@@ -337,9 +295,6 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
     private fun sharedPreferencesSave() {
         val preferences = getSharedPreferences(this).edit()
 
-        preferences.putBoolean(SharedPreferencesHelper.INSTALL_SOUND, activityHomeBinding!!.installSound.isChecked)
-        Timber.d(String.format("installSound=%b", activityHomeBinding!!.installSound.isChecked))
-
         preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_BORIS, selectedButtonIdBoris)
         Timber.d(String.format("selectedButtonIdBoris=%d", selectedButtonIdBoris))
 
@@ -360,7 +315,6 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
 
     private fun sharedPreferencesRestore() {
         val sharedPreferences = getSharedPreferences(this)
-        activityHomeBinding!!.installSound.isChecked = sharedPreferences.getBoolean(SharedPreferencesHelper.INSTALL_SOUND, activityHomeBinding!!.installSound.isChecked)
 
         selectedButtonIdBoris = sharedPreferences.getInt(SharedPreferencesHelper.SELECTED_BUTTONID_BORIS, activityHomeBinding!!.imageButtonBoris00.id)
         restoreButtonImage(selectedButtonIdBoris, buttonIdsBoris)

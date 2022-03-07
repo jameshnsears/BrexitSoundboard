@@ -37,5 +37,7 @@ class ActivityBoris : AbstractActivityPerson() {
         registerClickListener(R.id.buttonBorisSandpaperingTheBarnacles)
         registerClickListener(R.id.buttonBorisFacingARealProblem)
         registerClickListener(R.id.buttonBorisIgnoreMerchantsOfGloom)
+        registerClickListener(R.id.buttonBorisNoImpedimentToOurExports)
+        registerClickListener(R.id.buttonBorisBrexitAndUkraineSimilar)
     }
 }

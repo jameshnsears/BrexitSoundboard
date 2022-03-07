@@ -31,9 +31,11 @@ class AuditEventHelper private constructor(application: Application) {
             val auditProperties = ConcurrentHashMap<String, String>()
             var keyName = ""
             when (event) {
-                Event.PERSON -> keyName = "PERSON"
                 Event.SOUND -> keyName = "SOUND"
                 Event.MEDIA_LIBRARY -> keyName = "MEDIA_LIBRARY"
+                else -> {
+                    keyName = "PERSON"
+                }
             }
             auditProperties[keyName] = value
             trackEvent(keyName, auditProperties)

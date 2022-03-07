@@ -8,9 +8,13 @@ class MediaPlayerHelper {
     private var mediaPlayer: MediaPlayer? = null
 
     fun reset() {
-        if (mediaPlayer != null && mediaPlayer!!.isPlaying) {
-            mediaPlayer!!.stop()
-            mediaPlayer!!.release()
+        try {
+            if (mediaPlayer != null && mediaPlayer!!.isPlaying) {
+                mediaPlayer!!.stop()
+                mediaPlayer!!.release()
+            }
+        } catch (e: Exception) {
+            Timber.e(e.message)
         }
     }
 

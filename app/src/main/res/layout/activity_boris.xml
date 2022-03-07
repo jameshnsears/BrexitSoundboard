@@ -279,6 +279,16 @@
                 android:textColor="@color/colorRed" />
 
             <Button
+                android:id="@+id/buttonBorisNoImpedimentToOurExports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_boris_no_impediment_to_our_exports"
+                android:textColor="@color/colorRed" />
+
+
+            <Button
                 android:id="@+id/buttonBorisSandpaperingTheBarnacles"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -301,9 +311,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:background="@drawable/corners_buttons"
                 android:text="@string/button_boris_IgnoreMerchantsOfGloom"
+                android:textColor="@color/colorRed" />
+
+            <Button
+                android:id="@+id/buttonBorisBrexitAndUkraineSimilar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_boris_brexit_and_ukraine_similar"
                 android:textColor="@color/colorRed" />
 
         </LinearLayout>

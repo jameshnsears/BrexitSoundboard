@@ -23,5 +23,6 @@ class ActivityDavid : AbstractActivityPerson() {
         registerClickListener(R.id.buttonDavidTrumpMoment)
         registerClickListener(R.id.buttonDavidDoNotBlameMe)
         registerClickListener(R.id.buttonDavidWeCanLookAfterOurselves)
+        registerClickListener(R.id.buttonDavidNoDownsideToBrexit)
     }
 }

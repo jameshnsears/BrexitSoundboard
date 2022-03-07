@@ -36,6 +36,15 @@
             android:padding="5dp">
 
             <Button
+                android:id="@+id/buttonDavidNoDownsideToBrexit"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_david_no_downside_to_brexit" />
+
+            <Button
                 android:id="@+id/buttonDavidConfidentOfAGoodOutcome"
                 android:textColor="@color/colorRed"
                 android:layout_width="match_parent"

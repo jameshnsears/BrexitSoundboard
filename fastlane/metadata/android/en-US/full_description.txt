@@ -3,11 +3,10 @@
 &bull; Dr Liam Fox
 &bull; David Davis
 &bull; Theresa May
-&bull; Special Guest Appearance: Jacob William Rees-Mogg
+&bull; Jacob William Rees-Mogg
 
 <b>Bonus Features</b>
 &bull; Free &amp; without Ads.
-&bull; Media Library integration.
 &bull; Works offline.
 &bull; Anonymous analytics.
 &bull; Supported <a href="https://github.com/jameshnsears/brexitsoundboard">Open Source Software</a> project.

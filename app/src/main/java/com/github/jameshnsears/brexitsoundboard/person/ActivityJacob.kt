@@ -10,5 +10,7 @@ class ActivityJacob : AbstractActivityPerson() {
         registerClickListener(R.id.buttonJacobPerilsOfForecasting)
         registerClickListener(R.id.buttonJacobFiftyYearTimescale)
         registerClickListener(R.id.buttonJacobHappyBritishFish)
+        registerClickListener(R.id.buttonJacobDailyPrayer)
+        registerClickListener(R.id.buttonJacobMinisterForBrexitOpportunities)
     }
 }

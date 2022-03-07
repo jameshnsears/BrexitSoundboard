@@ -2,6 +2,7 @@
 /app/google-services.json
 /app/keystore.jks
 /app/release/app-release.aab
+/bin/tidy-up-github-actions.sh
 /build
 /captures
 /config/keystore.jks

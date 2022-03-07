@@ -1,7 +1,5 @@
 # Brexit Soundboard
 
-A simple Android App that plays memorable sound quotes from various Conservative politicians that supported Brexit.
-
 [![GitHub CI](https://github.com/jameshnsears/BrexitSoundboard/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/jameshnsears/BrexitSoundboard/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/github/jameshnsears/brexitsoundboard/badge.svg?branch=master)](https://coveralls.io/github/jameshnsears/brexitsoundboard?branch=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jameshnsears_BrexitSoundboard&metric=alert_status)](https://sonarcloud.io/dashboard?id=jameshnsears_BrexitSoundboard)

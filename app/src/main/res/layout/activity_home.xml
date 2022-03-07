@@ -41,17 +41,6 @@
             android:orientation="vertical"
             android:padding="5dp">
 
-            <Switch
-                android:id="@+id/installSound"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingVertical="5dp"
-                android:text="@string/install_sound"
-                android:textColor="@color/colorBlue"
-                android:textSize="16sp"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -313,6 +302,52 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imageButtonMogg00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    app:srcCompat="@drawable/mogg00" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonMogg01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/mogg01" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonMogg02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_buttons"
+                    android:contentDescription="@string/button_theresa"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/mogg02" />
+
+                <TextView
+                    android:id="@+id/textViewNameJacob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_jacob"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_marginTop="10dp">
 
@@ -374,69 +409,6 @@
                     android:text="@string/button_theresa"
                     android:textColor="@color/colorBlue"
                     android:textSize="20sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
-
-                <ImageButton
-                    android:id="@+id/imageButtonMogg00"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/corners_buttons"
-                    android:contentDescription="@string/button_theresa"
-                    app:srcCompat="@drawable/mogg00" />
-
-                <ImageButton
-                    android:id="@+id/imageButtonMogg01"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/corners_buttons"
-                    android:contentDescription="@string/button_theresa"
-                    android:visibility="gone"
-                    app:srcCompat="@drawable/mogg01" />
-
-                <ImageButton
-                    android:id="@+id/imageButtonMogg02"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/corners_buttons"
-                    android:contentDescription="@string/button_theresa"
-                    android:visibility="gone"
-                    app:srcCompat="@drawable/mogg02" />
-
-                <TextView
-                    android:id="@+id/textViewNameJacob"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/button_jacob"
-                    android:textColor="@color/colorBlue"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
-
-                <ImageButton
-                    android:id="@+id/imageButtonSuggestionBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/corners_buttons"
-                    android:contentDescription="@string/button_suggestion_box"
-                    app:srcCompat="@drawable/suggestionbox" />
-
             </LinearLayout>
 
             <LinearLayout
