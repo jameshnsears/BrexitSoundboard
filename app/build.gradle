@@ -144,7 +144,7 @@ dependencies {
     implementation 'com.microsoft.appcenter:appcenter-crashes:5.0.0'
 
     //noinspection GradleDependency
-    implementation 'commons-io:commons-io:2.6'
+    implementation 'commons-io:commons-io:2.11.0'
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation platform('com.google.firebase:firebase-bom:31.1.0')
