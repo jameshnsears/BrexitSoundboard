@@ -19,3 +19,5 @@
 /.idea/workspace.xml
 *.iml
 /local.properties
+/bin/envvars.sh
+/app/google-services.json-development

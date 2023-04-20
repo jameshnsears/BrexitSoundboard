@@ -36,6 +36,15 @@
             android:padding="5dp">
 
             <Button
+                android:id="@+id/buttonJacobCheapFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/corners_buttons"
+                android:text="@string/button_jacob_brexit_cheap_food"
+                android:textColor="@color/colorRed" />
+
+            <Button
                 android:id="@+id/buttonJacobPerilsOfForecasting"
                 android:textColor="@color/colorRed"
                 android:layout_width="match_parent"

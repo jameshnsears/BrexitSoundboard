@@ -28,14 +28,14 @@ android {
         applicationId 'na.brexitsoundboard'
         minSdkVersion 23
         targetSdkVersion 33
-        versionCode 292333
-        versionName '1.6.0'
+        versionCode 302333
+        versionName '1.7.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments clearPackageData: 'true'
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 
     packagingOptions {
@@ -89,8 +89,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     buildFeatures {
@@ -119,39 +119,40 @@ android {
         warningsAsErrors false
         xmlReport true
     }
+    namespace 'com.github.jameshnsears.brexitsoundboard'
 }
 
 dependencies {
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test:rules:1.5.0'
-    androidTestImplementation 'androidx.test:runner:1.5.1'
-    androidTestImplementation 'io.mockk:mockk-android:1.13.2'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'io.mockk:mockk-android:1.13.5'
     androidTestImplementation 'org.hamcrest:hamcrest-library:2.2'
-    androidTestImplementation 'org.mockito:mockito-core:4.9.0'
+    androidTestImplementation 'org.mockito:mockito-core:5.3.0'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.work:work-runtime-ktx:2.8.1'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-core:21.1.1'
     implementation 'com.google.firebase:firebase-crashlytics'
     implementation 'com.google.firebase:firebase-perf'
     implementation 'com.jakewharton.timber:timber:5.0.1'
-    implementation 'com.microsoft.appcenter:appcenter-analytics:5.0.0'
-    implementation 'com.microsoft.appcenter:appcenter-crashes:5.0.0'
+    implementation 'com.microsoft.appcenter:appcenter-analytics:5.0.1'
+    implementation 'com.microsoft.appcenter:appcenter-crashes:5.0.1'
 
     //noinspection GradleDependency
-    implementation 'commons-io:commons-io:2.6'
+    implementation 'commons-io:commons-io:2.11.0'
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    implementation platform('com.google.firebase:firebase-bom:31.5.0')
     testImplementation 'androidx.test:core:1.5.0'
-    testImplementation 'io.mockk:mockk:1.13.2'
+    testImplementation 'io.mockk:mockk:1.13.5'
     testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.mockito:mockito-core:4.9.0'
+    testImplementation 'org.mockito:mockito-core:5.3.0'
 }
 
 repositories {

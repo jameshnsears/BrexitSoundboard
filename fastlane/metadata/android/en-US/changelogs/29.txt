@@ -1,3 +1,0 @@
-&bull; More Sounds: BJ; DD; JRM
-&bull; Simplify app
-&bull; Update to Android Studio Dolphin | 2021.3.1 Patch 1 + 3rd party dependencies

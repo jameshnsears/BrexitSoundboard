@@ -158,6 +158,7 @@ class MapButtonToSound {
     }
 
     private fun mapJacobButtonsToSounds() {
+        buttonIdToSoundIdMap[R.id.buttonJacobCheapFood] = R.raw.mogg_sound_cheaper_food
         buttonIdToSoundIdMap[R.id.buttonJacobPerilsOfForecasting] =
             R.raw.mogg_sound_perils_of_forcasting
         buttonIdToSoundIdMap[R.id.buttonJacobFiftyYearTimescale] =
