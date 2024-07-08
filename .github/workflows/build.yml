@@ -28,7 +28,7 @@ jobs:
           java-version: 17
       - run: ./ci_clear_gradle_cache.sh
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
@@ -42,7 +42,7 @@ jobs:
           api-level: ${{ matrix.api-level }}
 
       # Retrieve the cached emulator snapshot.
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         id: avd-cache
         with:
           path: |
