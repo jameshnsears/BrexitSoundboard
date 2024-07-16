@@ -127,7 +127,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test:rules:1.5.0'
     androidTestImplementation 'androidx.test:runner:1.5.2'
-    androidTestImplementation 'io.mockk:mockk-android:1.13.5'
+    androidTestImplementation 'io.mockk:mockk-android:1.13.12'
     androidTestImplementation 'org.hamcrest:hamcrest-library:2.2'
     androidTestImplementation 'org.mockito:mockito-core:5.3.0'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
