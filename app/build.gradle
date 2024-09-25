@@ -1,7 +1,7 @@
 plugins {
     id 'jacoco'
     id 'com.github.kt3k.coveralls' version '2.12.2'
-    id 'io.gitlab.arturbosch.detekt' version '1.23.6'
+    id 'io.gitlab.arturbosch.detekt' version '1.23.7'
 }
 
 apply plugin: 'com.android.application'
