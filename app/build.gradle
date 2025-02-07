@@ -140,7 +140,7 @@ dependencies {
     implementation 'commons-io:commons-io:2.17.0'
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation platform('com.google.firebase:firebase-bom:33.5.1')
+    implementation platform('com.google.firebase:firebase-bom:33.9.0')
     testImplementation 'androidx.test:core:1.6.1'
     testImplementation 'io.mockk:mockk:1.13.13'
     testImplementation 'junit:junit:4.13.2'
