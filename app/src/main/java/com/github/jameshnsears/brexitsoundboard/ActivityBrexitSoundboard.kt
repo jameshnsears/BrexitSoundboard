@@ -20,6 +20,7 @@ import com.github.jameshnsears.brexitsoundboard.utils.SharedPreferencesHelper
 import com.github.jameshnsears.brexitsoundboard.utils.SharedPreferencesHelper.getSharedPreferences
 import com.github.jameshnsears.brexitsoundboard.utils.TimberDebugTree
 import timber.log.Timber
+import java.util.Locale
 
 class ActivityBrexitSoundboard : AppCompatActivity() {
     val buttonIdsBoris: MutableList<Int> = ArrayList()
@@ -43,7 +44,7 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
     var activityHomeBinding: ActivityHomeBinding? = null
 
     fun sharedPreferencesEmpty() {
-        getSharedPreferences(this).edit().clear().commit()
+        getSharedPreferences(this).edit().clear().apply()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,6 +57,8 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
         activityHomeBinding = ActivityHomeBinding.inflate(layoutInflater)
         val view: View = activityHomeBinding!!.root
         setContentView(view)
+
+        supportActionBar?.hide()
 
         initAuditing()
         setFooterVersion()
@@ -235,11 +238,20 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
 
     private fun setButtonImage(selectedImageButton: ImageButton) {
         when (determineButtonType(selectedImageButton)) {
-            ButtonType.BORIS -> selectedButtonIdBoris = setNextButtonImage(selectedImageButton, buttonIdsBoris)
-            ButtonType.LIAM -> selectedButtonIdLiam = setNextButtonImage(selectedImageButton, buttonIdsLiam)
-            ButtonType.DAVID -> selectedButtonIdDavid = setNextButtonImage(selectedImageButton, buttonIdsDavid)
-            ButtonType.THERESA -> selectedButtonIdTheresa = setNextButtonImage(selectedImageButton, buttonIdsTheresa)
-            ButtonType.JACOB -> selectedButtonIdJacob = setNextButtonImage(selectedImageButton, buttonIdsJacob)
+            ButtonType.BORIS -> selectedButtonIdBoris =
+                setNextButtonImage(selectedImageButton, buttonIdsBoris)
+
+            ButtonType.LIAM -> selectedButtonIdLiam =
+                setNextButtonImage(selectedImageButton, buttonIdsLiam)
+
+            ButtonType.DAVID -> selectedButtonIdDavid =
+                setNextButtonImage(selectedImageButton, buttonIdsDavid)
+
+            ButtonType.THERESA -> selectedButtonIdTheresa =
+                setNextButtonImage(selectedImageButton, buttonIdsTheresa)
+
+            ButtonType.JACOB -> selectedButtonIdJacob =
+                setNextButtonImage(selectedImageButton, buttonIdsJacob)
         }
     }
 
@@ -248,15 +260,19 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
             buttonIdsBoris.contains(imageButton.id) -> {
                 ButtonType.BORIS
             }
+
             buttonIdsLiam.contains(imageButton.id) -> {
                 ButtonType.LIAM
             }
+
             buttonIdsDavid.contains(imageButton.id) -> {
                 ButtonType.DAVID
             }
+
             buttonIdsTheresa.contains(imageButton.id) -> {
                 ButtonType.THERESA
             }
+
             else -> {
                 ButtonType.JACOB
             }
@@ -296,19 +312,22 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
         val preferences = getSharedPreferences(this).edit()
 
         preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_BORIS, selectedButtonIdBoris)
-        Timber.d(String.format("selectedButtonIdBoris=%d", selectedButtonIdBoris))
+        Timber.d(String.format(Locale.UK, "selectedButtonIdBoris=%d", selectedButtonIdBoris))
 
         preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_LIAM, selectedButtonIdLiam)
-        Timber.d(String.format("selectedButtonIdLiam=%d", selectedButtonIdLiam))
+        Timber.d(String.format(Locale.UK, "selectedButtonIdLiam=%d", selectedButtonIdLiam))
 
         preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_DAVID, selectedButtonIdDavid)
-        Timber.d(String.format("selectedButtonIdDavid=%d", selectedButtonIdDavid))
+        Timber.d(String.format(Locale.UK, "selectedButtonIdDavid=%d", selectedButtonIdDavid))
 
-        preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_THERESA, selectedButtonIdTheresa)
-        Timber.d(String.format("selectedButtonIdTheresa=%d", selectedButtonIdTheresa))
+        preferences.putInt(
+            SharedPreferencesHelper.SELECTED_BUTTONID_THERESA,
+            selectedButtonIdTheresa
+        )
+        Timber.d(String.format(Locale.UK, "selectedButtonIdTheresa=%d", selectedButtonIdTheresa))
 
         preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_JACOB, selectedButtonIdJacob)
-        Timber.d(String.format("selectedButtonIdJacob=%d", selectedButtonIdJacob))
+        Timber.d(String.format(Locale.UK, "selectedButtonIdJacob=%d", selectedButtonIdJacob))
 
         preferences.apply()
     }
@@ -316,23 +335,34 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
     private fun sharedPreferencesRestore() {
         val sharedPreferences = getSharedPreferences(this)
 
-        selectedButtonIdBoris = sharedPreferences.getInt(SharedPreferencesHelper.SELECTED_BUTTONID_BORIS, activityHomeBinding!!.imageButtonBoris00.id)
+        selectedButtonIdBoris = sharedPreferences.getInt(
+            SharedPreferencesHelper.SELECTED_BUTTONID_BORIS,
+            activityHomeBinding!!.imageButtonBoris00.id
+        )
         restoreButtonImage(selectedButtonIdBoris, buttonIdsBoris)
 
-        selectedButtonIdLiam = sharedPreferences.getInt(SharedPreferencesHelper.SELECTED_BUTTONID_LIAM, activityHomeBinding!!.imageButtonLiam00.id)
+        selectedButtonIdLiam = sharedPreferences.getInt(
+            SharedPreferencesHelper.SELECTED_BUTTONID_LIAM,
+            activityHomeBinding!!.imageButtonLiam00.id
+        )
         restoreButtonImage(selectedButtonIdLiam, buttonIdsLiam)
 
-        selectedButtonIdDavid = sharedPreferences.getInt(SharedPreferencesHelper.SELECTED_BUTTONID_DAVID, activityHomeBinding!!.imageButtonDavid00.id)
+        selectedButtonIdDavid = sharedPreferences.getInt(
+            SharedPreferencesHelper.SELECTED_BUTTONID_DAVID,
+            activityHomeBinding!!.imageButtonDavid00.id
+        )
         restoreButtonImage(selectedButtonIdDavid, buttonIdsDavid)
 
-        selectedButtonIdTheresa = sharedPreferences.getInt(SharedPreferencesHelper.SELECTED_BUTTONID_THERESA, activityHomeBinding!!.imageButtonTheresa00.id)
+        selectedButtonIdTheresa = sharedPreferences.getInt(
+            SharedPreferencesHelper.SELECTED_BUTTONID_THERESA,
+            activityHomeBinding!!.imageButtonTheresa00.id
+        )
         restoreButtonImage(selectedButtonIdTheresa, buttonIdsTheresa)
 
-        selectedButtonIdJacob = sharedPreferences.getInt(SharedPreferencesHelper.SELECTED_BUTTONID_JACOB, activityHomeBinding!!.imageButtonMogg00.id)
+        selectedButtonIdJacob = sharedPreferences.getInt(
+            SharedPreferencesHelper.SELECTED_BUTTONID_JACOB,
+            activityHomeBinding!!.imageButtonMogg00.id
+        )
         restoreButtonImage(selectedButtonIdJacob, buttonIdsJacob)
-    }
-
-    companion object {
-        private const val BREXIT_SOUNDBOARD_EXTERNAL_STORAGE = 10101010
     }
 }

@@ -18,6 +18,7 @@
         android:clipToPadding="true"
         android:fillViewport="true"
         android:scrollbarStyle="insideInset"
+        android:scrollbarThumbVertical="@color/colorBlue"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,8 +27,7 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:scrollbarThumbVertical="@color/colorBlue">
+        tools:layout_constraintTop_creator="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,12 +46,12 @@
 
             <Button
                 android:id="@+id/buttonJacobPerilsOfForecasting"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_jacob_PerilsOfForecasting" />
+                android:text="@string/button_jacob_PerilsOfForecasting"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonJacobFiftyYearTimescale"
@@ -64,31 +64,31 @@
 
             <Button
                 android:id="@+id/buttonJacobHappyBritishFish"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_jacob_HappyBritishFish" />
+                android:text="@string/button_jacob_HappyBritishFish"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonJacobDailyPrayer"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_jacob_brexit_daily_prayer" />
+                android:text="@string/button_jacob_brexit_daily_prayer"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonJacobMinisterForBrexitOpportunities"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_jacob_minister_for_brexit_opportunities" />
+                android:text="@string/button_jacob_minister_for_brexit_opportunities"
+                android:textColor="@color/colorRed" />
 
         </LinearLayout>
     </ScrollView>

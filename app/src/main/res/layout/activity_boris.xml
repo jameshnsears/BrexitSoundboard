@@ -18,6 +18,7 @@
         android:clipToPadding="true"
         android:fillViewport="true"
         android:scrollbarStyle="insideInset"
+        android:scrollbarThumbVertical="@color/colorBlue"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,8 +27,7 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:scrollbarThumbVertical="@color/colorBlue">
+        tools:layout_constraintTop_creator="1">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -37,165 +37,165 @@
 
             <Button
                 android:id="@+id/buttonBoris350MillionPoundsAWeek"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_350MillionPoundsAWeek" />
+                android:text="@string/button_boris_350MillionPoundsAWeek"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisHiggeldyPiggeldyNations"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_HiggledyPiggledyNations" />
+                android:text="@string/button_boris_HiggledyPiggledyNations"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisWeExportTvAerials"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_WeExportTvAerials" />
+                android:text="@string/button_boris_WeExportTvAerials"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisLittleBenefitFromEU"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_LittleBenefitFromEU" />
+                android:text="@string/button_boris_LittleBenefitFromEU"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisAllYourOptionsAreGood"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_AllYourOptionsAreGood" />
+                android:text="@string/button_boris_AllYourOptionsAreGood"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisCostOfGettingOutVirtuallyNil"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_CostOfGettingOutVirtuallyNil" />
+                android:text="@string/button_boris_CostOfGettingOutVirtuallyNil"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisWeightLiftedFromBritishBusiness"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_WeightLiftedFromBritishBusiness" />
+                android:text="@string/button_boris_WeightLiftedFromBritishBusiness"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisBrexitHasNotDamagedCountry"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_BrexitHasNotDamagedCountry" />
+                android:text="@string/button_boris_BrexitHasNotDamagedCountry"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisWinWinForAllOfUs"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_WinWinForAllOfUs" />
+                android:text="@string/button_boris_WinWinForAllOfUs"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisUkShapingTheModernWorld"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_UkShapingTheModernWorld" />
+                android:text="@string/button_boris_UkShapingTheModernWorld"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisTigerInTheTank"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_TigerInTheTank" />
+                android:text="@string/button_boris_TigerInTheTank"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisAsLongAsItTakes"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_AsLongAsItTakes" />
+                android:text="@string/button_boris_AsLongAsItTakes"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisDoNotUnderestimate"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_DoNotUnderestimate" />
+                android:text="@string/button_boris_DoNotUnderestimate"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisVindicatedByHistory"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_VindicatedByHistory" />
+                android:text="@string/button_boris_VindicatedByHistory"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisDeadInADitch"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_DeadInADitch" />
+                android:text="@string/button_boris_DeadInADitch"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisFriendsAreABitNegative"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_FriendsAreABitNegative" />
+                android:text="@string/button_boris_FriendsAreABitNegative"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisLetsGetBrexitDone"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_LetsGetBrexitDone" />
+                android:text="@string/button_boris_LetsGetBrexitDone"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisNoNIChecks"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_NoNIChecks" />
+                android:text="@string/button_boris_NoNIChecks"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisProsperMightily"
@@ -208,12 +208,12 @@
 
             <Button
                 android:id="@+id/buttonBorisPutItInTheMicrowave"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_boris_PutItInTheMicrowave" />
+                android:text="@string/button_boris_PutItInTheMicrowave"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonBorisWeHaveADeal"

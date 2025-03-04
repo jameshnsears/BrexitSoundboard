@@ -13,7 +13,8 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class ActivityBrexitSoundboardTest {
     @get:Rule
-    var activityBrexitSoundboard: ActivityTestRule<ActivityBrexitSoundboard> = ActivityTestRule(ActivityBrexitSoundboard::class.java)
+    var activityBrexitSoundboard: ActivityTestRule<ActivityBrexitSoundboard> =
+        ActivityTestRule(ActivityBrexitSoundboard::class.java)
 
     @Before
     @After

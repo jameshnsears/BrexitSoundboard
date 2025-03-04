@@ -1,0 +1,2 @@
+&bull; Fix HyperOS related issue
+&bull; Bump dependencies &amp; IDE: Android Studio Ladybug Feature Drop | 2024.2.2 Patch 1

@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center_vertical|center_horizontal"
-    android:layout_margin="0dp"
-    android:layout_marginStart="0dp"
-    android:layout_marginLeft="0dp"
-    android:layout_marginTop="0dp"
-    android:layout_marginEnd="0dp"
-    android:layout_marginRight="0dp"
-    android:layout_marginBottom="0dp"
     android:background="#FFFFFF"
     tools:context="com.github.jameshnsears.brexitsoundboard.ActivityBrexitSoundboard">
 
@@ -27,12 +21,12 @@
         android:clipToPadding="true"
         android:fillViewport="true"
         android:scrollbarStyle="insideInset"
+        android:scrollbarThumbVertical="@color/colorBlue"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scrollbarThumbVertical="@color/colorBlue">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -44,8 +38,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButtonBoris00"
@@ -170,8 +164,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButtonLiam00"
@@ -246,8 +240,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButtonDavid00"
@@ -348,8 +342,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/imageButtonTheresa00"
@@ -414,16 +408,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textViewVersion"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:padding="5dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorBlue" />
+                    android:textColor="@color/colorBlue"
+                    android:textSize="16sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

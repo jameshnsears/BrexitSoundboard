@@ -6,6 +6,9 @@ import com.github.jameshnsears.brexitsoundboard.R
 class ActivityLiam : AbstractActivityPerson() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        supportActionBar?.hide()
+
         setContentView(R.layout.activity_liam)
         registerClickListener(R.id.buttonLiamCitizensFirstNotPolitics)
         registerClickListener(R.id.buttonLiamEasiestInHumanHistory)

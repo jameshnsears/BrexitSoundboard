@@ -18,6 +18,7 @@
         android:clipToPadding="true"
         android:fillViewport="true"
         android:scrollbarStyle="insideInset"
+        android:scrollbarThumbVertical="@color/colorBlue"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,8 +27,7 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:scrollbarThumbVertical="@color/colorBlue">
+        tools:layout_constraintTop_creator="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,12 +37,12 @@
 
             <Button
                 android:id="@+id/buttonTheresaWeShouldStayInTheEu"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_WeShouldStayInsideEU" />
+                android:text="@string/button_theresa_WeShouldStayInsideEU"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresaCitizenOfNowhere"
@@ -55,85 +55,85 @@
 
             <Button
                 android:id="@+id/buttonTheresAPlan"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_APlanForBritain" />
+                android:text="@string/button_theresa_APlanForBritain"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresaBrexitMeansBrexit"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_BrexitMeansBrexit" />
+                android:text="@string/button_theresa_BrexitMeansBrexit"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresaRedWhiteAndBlueBrexit"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_RedWhiteAndBlueBrexit" />
+                android:text="@string/button_theresa_RedWhiteAndBlueBrexit"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresaCertaintyAndClarity"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_CertaintyAndClarity" />
+                android:text="@string/button_theresa_CertaintyAndClarity"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresaNoDealBetterThanABadDeal"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_NoDealBetterThanABadDeal" />
+                android:text="@string/button_theresa_NoDealBetterThanABadDeal"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresaNoNeedForAnElection"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_NoNeedForAnElection" />
+                android:text="@string/button_theresa_NoNeedForAnElection"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresaStrongAndStableLeadership"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_StrongAndStableLeadership" />
+                android:text="@string/button_theresa_StrongAndStableLeadership"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresaNIisPartOfTheUK"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_NIisPartOfTheUK" />
+                android:text="@string/button_theresa_NIisPartOfTheUK"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonTheresaIWillNeverAgreeTo"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_theresa_IWillNeverAgreeTo" />
+                android:text="@string/button_theresa_IWillNeverAgreeTo"
+                android:textColor="@color/colorRed" />
 
         </LinearLayout>
     </ScrollView>

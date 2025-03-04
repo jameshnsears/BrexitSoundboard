@@ -6,6 +6,9 @@ import com.github.jameshnsears.brexitsoundboard.R
 class ActivityBoris : AbstractActivityPerson() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        supportActionBar?.hide()
+
         setContentView(R.layout.activity_boris)
         registerClickListener(R.id.buttonBoris350MillionPoundsAWeek)
         registerClickListener(R.id.buttonBorisHiggeldyPiggeldyNations)

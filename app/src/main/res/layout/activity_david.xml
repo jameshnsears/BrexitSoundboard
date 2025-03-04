@@ -18,6 +18,7 @@
         android:clipToPadding="true"
         android:fillViewport="true"
         android:scrollbarStyle="insideInset"
+        android:scrollbarThumbVertical="@color/colorBlue"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,8 +27,7 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:scrollbarThumbVertical="@color/colorBlue">
+        tools:layout_constraintTop_creator="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,157 +37,157 @@
 
             <Button
                 android:id="@+id/buttonDavidNoDownsideToBrexit"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_no_downside_to_brexit" />
+                android:text="@string/button_david_no_downside_to_brexit"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidConfidentOfAGoodOutcome"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_ConfidentOfAGoodOutcome" />
+                android:text="@string/button_david_ConfidentOfAGoodOutcome"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidTheRiskIsWorthIt"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_TheRiskIsWorthIt" />
+                android:text="@string/button_david_TheRiskIsWorthIt"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidIRuleNothingInNothingOut"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_IRuleNothingInNothingOut" />
+                android:text="@string/button_david_IRuleNothingInNothingOut"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidDifficultToReadWhatWeIntend"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_DifficultToReadWhatWeIntend" />
+                android:text="@string/button_david_DifficultToReadWhatWeIntend"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidItsGoingIncrediblyWell"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_ItsGoingIncrediblyWell" />
+                android:text="@string/button_david_ItsGoingIncrediblyWell"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidItsGettingABitTense"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_ItsGettingABitTense" />
+                android:text="@string/button_david_ItsGettingABitTense"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidVeryGoodLawyers"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_VeryGoodLawyers" />
+                android:text="@string/button_david_VeryGoodLawyers"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidNobodyPretendedThisWillBeSimpleOrEasy"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_NobodyPretendedThisWillBeSimpleOrEasy" />
+                android:text="@string/button_david_NobodyPretendedThisWillBeSimpleOrEasy"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidSectorialAnalysis"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_SectorialAnalysis" />
+                android:text="@string/button_david_SectorialAnalysis"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidOnlyLastTwoMonthsMatter"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_OnlyLastTwoMonthsMatter" />
+                android:text="@string/button_david_OnlyLastTwoMonthsMatter"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidFollowUs"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_FollowUs" />
+                android:text="@string/button_david_FollowUs"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidDamageWorseForEurope"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_DamageWorseForEurope" />
+                android:text="@string/button_david_DamageWorseForEurope"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidAgreementWillFavourTheEU"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_AgreementWillFavourTheEU" />
+                android:text="@string/button_david_AgreementWillFavourTheEU"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidTrumpMoment"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_TrumpMoment" />
+                android:text="@string/button_david_TrumpMoment"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidDoNotBlameMe"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_DoNotBlameMe" />
+                android:text="@string/button_david_DoNotBlameMe"
+                android:textColor="@color/colorRed" />
 
             <Button
                 android:id="@+id/buttonDavidWeCanLookAfterOurselves"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/corners_buttons"
-                android:text="@string/button_david_WeCanLookAfterOurselves" />
+                android:text="@string/button_david_WeCanLookAfterOurselves"
+                android:textColor="@color/colorRed" />
 
         </LinearLayout>
     </ScrollView>
