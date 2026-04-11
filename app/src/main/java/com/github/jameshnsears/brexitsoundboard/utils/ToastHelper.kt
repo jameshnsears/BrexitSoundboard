@@ -6,7 +6,10 @@ import android.widget.Toast
 object ToastHelper {
     private var toast: Toast? = null
 
-    fun makeToast(context: Context, message: String) {
+    fun makeToast(
+        context: Context,
+        message: String,
+    ) {
         if (toast != null) {
             toast!!.cancel()
         }
@@ -21,7 +24,8 @@ object ToastHelper {
         }
     }
 
-    fun buildToast(context: Context, message: String): Toast? {
-        return Toast.makeText(context, message, Toast.LENGTH_LONG)
-    }
+    fun buildToast(
+        context: Context,
+        message: String,
+    ): Toast? = Toast.makeText(context, message, Toast.LENGTH_LONG)
 }

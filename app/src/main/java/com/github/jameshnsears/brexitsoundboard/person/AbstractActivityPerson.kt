@@ -12,7 +12,9 @@ import com.github.jameshnsears.brexitsoundboard.utils.SharedPreferencesHelper.is
 import com.github.jameshnsears.brexitsoundboard.utils.ToastHelper
 import timber.log.Timber
 
-abstract class AbstractActivityPerson : AppCompatActivity(), View.OnClickListener {
+abstract class AbstractActivityPerson :
+    AppCompatActivity(),
+    View.OnClickListener {
     private val mapButtonToSound = MapButtonToSound()
 
     private val mediaPlayerHelper = MediaPlayerHelper()
@@ -27,7 +29,7 @@ abstract class AbstractActivityPerson : AppCompatActivity(), View.OnClickListene
     override fun onClick(view: View) {
         soundPlay(
             mapButtonToSound.buttonIdToSoundIdMap[view.id]!!,
-            findViewById<Button>(view.id).text.toString()
+            findViewById<Button>(view.id).text.toString(),
         )
     }
 
@@ -36,7 +38,10 @@ abstract class AbstractActivityPerson : AppCompatActivity(), View.OnClickListene
         ToastHelper.cancelToast()
     }
 
-    private fun soundPlay(rawSoundId: Int, nameOfSound: String) {
+    private fun soundPlay(
+        rawSoundId: Int,
+        nameOfSound: String,
+    ) {
         Timber.d(nameOfSound)
 
         auditEvent(AuditEventHelper.Event.SOUND, nameOfSound)
@@ -45,7 +50,10 @@ abstract class AbstractActivityPerson : AppCompatActivity(), View.OnClickListene
         mediaPlayerHelper.play(this, rawSoundId)
     }
 
-    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
+    override fun onKeyDown(
+        keyCode: Int,
+        event: KeyEvent,
+    ): Boolean {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             mediaPlayerHelper.reset()
         }

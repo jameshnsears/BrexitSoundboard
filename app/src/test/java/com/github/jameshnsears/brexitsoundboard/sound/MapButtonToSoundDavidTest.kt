@@ -1,6 +1,6 @@
 package com.github.jameshnsears.brexitsoundboard.sound
 
-import com.github.jameshnsears.brexitsoundboard.R
+import na.brexitsoundboard.R
 import org.junit.Test
 
 class MapButtonToSoundDavidTest : AbstractMapButtonToSound() {
@@ -25,12 +25,12 @@ class MapButtonToSoundDavidTest : AbstractMapButtonToSound() {
         keyValueMap[R.id.buttonDavidOnlyLastTwoMonthsMatter] =
             R.raw.david_sound_only_last_two_months_matter
         keyValueMap[R.id.buttonDavidTheRiskIsWorthIt] = R.raw.david_sound_the_risk_is_worth_it
-        keyValueMap[R.id.buttonDavidDamageWorseForEurope] =
-            R.raw.david_sound_damage_worse_for_europe
+        keyValueMap[R.id.buttonDavidDamageWorseForEurope] = R.raw.david_sound_damage_worse_for_europe
         keyValueMap[R.id.buttonDavidTrumpMoment] = R.raw.david_sound_trump_moment
         keyValueMap[R.id.buttonDavidDoNotBlameMe] = R.raw.david_sound_not_about_blame
         keyValueMap[R.id.buttonDavidWeCanLookAfterOurselves] =
             R.raw.david_sound_we_can_look_after_ourselves
+        keyValueMap[R.id.buttonDavidNoDownsideToBrexit] = R.raw.david_sounds_no_downside_to_brexit
 
         assertKeyValueMatch()
     }

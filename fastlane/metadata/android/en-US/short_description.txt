@@ -1,1 +1,1 @@
-Hear what they said about Brexit!
+A simple Android App that plays memorable sound quotes from leading Conservative politicians that supported Brexit.

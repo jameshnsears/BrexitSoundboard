@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ImplicitDefaultLocale:TimberDebugTree.kt$TimberDebugTree$String.format( "%s.%s, %s", super.createStackElementTag(element), element.methodName, element.lineNumber, )</ID>
+    <ID>MagicNumber:AuditEventHelper.kt$AuditEventHelper.Companion$100</ID>
+    <ID>MagicNumber:AuditEventHelper.kt$AuditEventHelper.Companion$40</ID>
+    <ID>MaxLineLength:SharedPreferencesHelper.kt$SharedPreferencesHelper$fun isInstallSoundEnabled(context: Context): Boolean</ID>
+    <ID>SwallowedException:MediaPlayerHelper.kt$MediaPlayerHelper$e: IllegalStateException</ID>
+    <ID>TooGenericExceptionCaught:MediaPlayerHelper.kt$MediaPlayerHelper$e: Exception</ID>
+    <ID>TooManyFunctions:ActivityBrexitSoundboard.kt$ActivityBrexitSoundboard : AppCompatActivity</ID>
+  </CurrentIssues>
+</SmellBaseline>

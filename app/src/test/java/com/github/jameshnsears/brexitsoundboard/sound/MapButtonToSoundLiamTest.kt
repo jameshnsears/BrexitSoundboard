@@ -1,6 +1,6 @@
 package com.github.jameshnsears.brexitsoundboard.sound
 
-import com.github.jameshnsears.brexitsoundboard.R
+import na.brexitsoundboard.R
 import org.junit.Test
 
 class MapButtonToSoundLiamTest : AbstractMapButtonToSound() {

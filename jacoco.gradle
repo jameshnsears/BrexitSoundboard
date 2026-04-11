@@ -1,19 +1,19 @@
 apply plugin: 'jacoco'
 
 jacoco {
-    toolVersion = "0.8.7"
+    toolVersion = "0.8.12"
 }
 
 // , dependsOn: ['testDebugUnitTest', 'createDebugCoverageReport']
 task jacocoReport(type: JacocoReport) {
     reports {
         xml {
-            enabled true
-            destination file("$project.buildDir/reports/jacoco-combined.xml")
+            required = true
+            outputLocation = file("$project.buildDir/reports/jacoco-combined.xml")
         }
         html {
-            enabled true
-            destination file("$project.buildDir/reports/jacoco")
+            required = true
+            outputLocation = file("$project.buildDir/reports/jacoco")
         }
     }
 

@@ -1,10 +1,15 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat">
-        <item name="android:windowFullscreen">false</item>
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorRed</item>
         <item name="colorPrimaryDark">@color/colorRed</item>
         <item name="colorAccent">@color/colorBlue</item>
-        <item name="android:actionMenuTextColor">@color/colorWhite</item>
+
+        <item name="colorSecondaryContainer">#E1E2E1</item>
+        <item name="colorOnSecondaryContainer">#1C1B1F</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="materialButtonStyle">@style/Widget.Material3.Button.TonalButton</item>
     </style>
 </resources>

@@ -2,17 +2,15 @@ package com.github.jameshnsears.brexitsoundboard.audit
 
 import android.app.Application
 import android.os.Bundle
-import com.github.jameshnsears.brexitsoundboard.BuildConfig
 import com.google.firebase.analytics.FirebaseAnalytics
-import com.microsoft.appcenter.AppCenter
-import com.microsoft.appcenter.analytics.Analytics
-import com.microsoft.appcenter.crashes.Crashes
 import timber.log.Timber
 import java.util.concurrent.ConcurrentHashMap
 
-class AuditEventHelper private constructor(application: Application) {
+class AuditEventHelper {
     enum class Event {
-        PERSON, SOUND, MEDIA_LIBRARY
+        PERSON,
+        SOUND,
+        MEDIA_LIBRARY,
     }
 
     companion object {
@@ -22,14 +20,17 @@ class AuditEventHelper private constructor(application: Application) {
         @Synchronized
         fun createInstance(application: Application) {
             if (auditEventHelperSingleton == null) {
-                auditEventHelperSingleton = AuditEventHelper(application)
+                auditEventHelperSingleton = AuditEventHelper()
                 firebaseAnalytics = FirebaseAnalytics.getInstance(application.applicationContext)
             }
         }
 
-        fun auditEvent(event: Event?, value: String) {
+        fun auditEvent(
+            event: Event?,
+            value: String,
+        ) {
             val auditProperties = ConcurrentHashMap<String, String>()
-            var keyName = ""
+            var keyName: String
             when (event) {
                 Event.SOUND -> keyName = "SOUND"
                 Event.MEDIA_LIBRARY -> keyName = "MEDIA_LIBRARY"
@@ -41,7 +42,10 @@ class AuditEventHelper private constructor(application: Application) {
             trackEvent(keyName, auditProperties)
         }
 
-        fun trackEvent(keyName: String, auditProperties: ConcurrentHashMap<String, String>) {
+        fun trackEvent(
+            keyName: String,
+            auditProperties: ConcurrentHashMap<String, String>,
+        ) {
             // adb uninstall na.brexitsoundboard
 
             // on
@@ -65,17 +69,6 @@ class AuditEventHelper private constructor(application: Application) {
             }
 
             firebaseAnalytics?.logEvent(keyName, bundle)
-
-            Analytics.trackEvent(keyName, auditProperties)
         }
-    }
-
-    init {
-        AppCenter.start(
-            application,
-            BuildConfig.APPCENTER_KEY,
-            Analytics::class.java,
-            Crashes::class.java
-        )
     }
 }

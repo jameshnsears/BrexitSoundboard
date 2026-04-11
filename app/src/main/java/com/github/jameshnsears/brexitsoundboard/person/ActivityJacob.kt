@@ -1,7 +1,7 @@
 package com.github.jameshnsears.brexitsoundboard.person
 
 import android.os.Bundle
-import com.github.jameshnsears.brexitsoundboard.R
+import na.brexitsoundboard.R
 
 class ActivityJacob : AbstractActivityPerson() {
     override fun onCreate(savedInstanceState: Bundle?) {

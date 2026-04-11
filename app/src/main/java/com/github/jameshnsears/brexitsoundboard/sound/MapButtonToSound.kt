@@ -1,7 +1,7 @@
 package com.github.jameshnsears.brexitsoundboard.sound
 
 import android.annotation.SuppressLint
-import com.github.jameshnsears.brexitsoundboard.R
+import na.brexitsoundboard.R
 import java.util.concurrent.ConcurrentHashMap
 
 class MapButtonToSound {
@@ -165,8 +165,9 @@ class MapButtonToSound {
             R.raw.mogg_sound_fifty_year_timescale
         buttonIdToSoundIdMap[R.id.buttonJacobHappyBritishFish] = R.raw.mogg_sound_happy_fish
         buttonIdToSoundIdMap[R.id.buttonJacobDailyPrayer] = R.raw.mogg_sound_daily_prayer_for_brexit
-        buttonIdToSoundIdMap[R.id.buttonJacobMinisterForBrexitOpportunities] = R
-            .raw.mogg_sound_minister_for_brexit_opportunities
+        buttonIdToSoundIdMap[R.id.buttonJacobMinisterForBrexitOpportunities] =
+            R
+                .raw.mogg_sound_minister_for_brexit_opportunities
     }
 
     init {

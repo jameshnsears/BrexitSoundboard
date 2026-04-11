@@ -12,11 +12,8 @@ object SharedPreferencesHelper {
     var SELECTED_BUTTONID_THERESA = "currentTheresaButtonId"
     var SELECTED_BUTTONID_JACOB = "currentJacobButtonId"
 
-    fun getSharedPreferences(context: Context): SharedPreferences {
-        return context.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
-    }
+    fun getSharedPreferences(context: Context): SharedPreferences =
+        context.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
 
-    fun isInstallSoundEnabled(context: Context): Boolean {
-        return getSharedPreferences(context).getBoolean(INSTALL_SOUND, false)
-    }
+    fun isInstallSoundEnabled(context: Context): Boolean = getSharedPreferences(context).getBoolean(INSTALL_SOUND, false)
 }

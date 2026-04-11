@@ -1,15 +1,18 @@
 package com.github.jameshnsears.brexitsoundboard
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
+import androidx.core.net.toUri
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.github.jameshnsears.brexitsoundboard.audit.AuditEventHelper
 import com.github.jameshnsears.brexitsoundboard.audit.AuditEventHelper.Companion.auditEvent
 import com.github.jameshnsears.brexitsoundboard.audit.AuditEventHelper.Companion.createInstance
-import com.github.jameshnsears.brexitsoundboard.databinding.ActivityHomeBinding
 import com.github.jameshnsears.brexitsoundboard.person.ActivityBoris
 import com.github.jameshnsears.brexitsoundboard.person.ActivityDavid
 import com.github.jameshnsears.brexitsoundboard.person.ActivityJacob
@@ -19,6 +22,9 @@ import com.github.jameshnsears.brexitsoundboard.sound.MediaPlayerHelper
 import com.github.jameshnsears.brexitsoundboard.utils.SharedPreferencesHelper
 import com.github.jameshnsears.brexitsoundboard.utils.SharedPreferencesHelper.getSharedPreferences
 import com.github.jameshnsears.brexitsoundboard.utils.TimberDebugTree
+import na.brexitsoundboard.BuildConfig
+import na.brexitsoundboard.R
+import na.brexitsoundboard.databinding.ActivityHomeBinding
 import timber.log.Timber
 import java.util.Locale
 
@@ -38,16 +44,23 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
     private val mediaPlayerHelper = MediaPlayerHelper()
 
     enum class ButtonType {
-        BORIS, LIAM, DAVID, THERESA, JACOB
+        BORIS,
+        LIAM,
+        DAVID,
+        THERESA,
+        JACOB,
     }
 
     var activityHomeBinding: ActivityHomeBinding? = null
 
     fun sharedPreferencesEmpty() {
-        getSharedPreferences(this).edit().clear().apply()
+        getSharedPreferences(this).edit { clear() }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // 1. Enable Edge-to-Edge BEFORE super.onCreate
+        enableEdgeToEdge()
+
         super.onCreate(savedInstanceState)
 
         if (BuildConfig.DEBUG) {
@@ -58,15 +71,23 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
         val view: View = activityHomeBinding!!.root
         setContentView(view)
 
+        // 2. Handle System Bar Insets
+        // This ensures your content isn't cut off by the camera cutout or navigation bar
+        ViewCompat.setOnApplyWindowInsetsListener(view) { v, windowInsets ->
+            val systemBars = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            // Apply padding to the root view so it respects the status/nav bar areas
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            windowInsets
+        }
+
+        // Hide Action Bar if it exists
         supportActionBar?.hide()
 
         initAuditing()
         setFooterVersion()
-
         registerClickListenersForImageButtons()
         registerClickListenerWikipedia()
         registerClickListenerFooter()
-
         sharedPreferencesRestore()
     }
 
@@ -87,11 +108,12 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
     }
 
     private fun setFooterVersion() {
-        activityHomeBinding!!.textViewVersion.text = resources.getString(
-            R.string.footer_version,
-            BuildConfig.VERSION_NAME,
-            BuildConfig.GIT_HASH
-        )
+        activityHomeBinding!!.textViewVersion.text =
+            resources.getString(
+                R.string.footer_version,
+                BuildConfig.VERSION_NAME,
+                BuildConfig.GIT_HASH,
+            )
     }
 
     private fun registerClickListenersForImageButtons() {
@@ -161,40 +183,40 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://en.wikipedia.org/wiki/Boris_Johnson")
-                )
+                    "https://en.wikipedia.org/wiki/Boris_Johnson".toUri(),
+                ),
             )
         }
         activityHomeBinding!!.textViewNameLiam.setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://en.wikipedia.org/wiki/Liam_Fox")
-                )
+                    "https://en.wikipedia.org/wiki/Liam_Fox".toUri(),
+                ),
             )
         }
         activityHomeBinding!!.textViewNameDavid.setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://en.wikipedia.org/wiki/David_Davis_(British_politician)")
-                )
+                    "https://en.wikipedia.org/wiki/David_Davis_(British_politician)".toUri(),
+                ),
             )
         }
         activityHomeBinding!!.textViewNameTheresa.setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://en.wikipedia.org/wiki/Theresa_May")
-                )
+                    "https://en.wikipedia.org/wiki/Theresa_May".toUri(),
+                ),
             )
         }
         activityHomeBinding!!.textViewNameJacob.setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://en.wikipedia.org/wiki/Jacob_Rees-Mogg")
-                )
+                    "https://en.wikipedia.org/wiki/Jacob_Rees-Mogg".toUri(),
+                ),
             )
         }
     }
@@ -205,27 +227,33 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse(githubUrl)
-                )
+                    githubUrl.toUri(),
+                ),
             )
         }
         activityHomeBinding!!.githubLogo.setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse(githubUrl)
-                )
+                    githubUrl.toUri(),
+                ),
             )
         }
     }
 
-    private fun registerClickListenersForButtonIds(buttonIds: List<Int>, activity: Class<*>) {
+    private fun registerClickListenersForButtonIds(
+        buttonIds: List<Int>,
+        activity: Class<*>,
+    ) {
         for (buttonId in buttonIds) {
             registerClickListenerForButtonId(buttonId, activity)
         }
     }
 
-    private fun registerClickListenerForButtonId(imageButtonViewId: Int, activityClass: Class<*>?) {
+    private fun registerClickListenerForButtonId(
+        imageButtonViewId: Int,
+        activityClass: Class<*>?,
+    ) {
         findViewById<View>(imageButtonViewId).setOnClickListener { view: View ->
             imageButtonClickedOn = findViewById(imageButtonViewId)
             val imageButton = imageButtonClickedOn
@@ -238,51 +266,60 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
 
     private fun setButtonImage(selectedImageButton: ImageButton) {
         when (determineButtonType(selectedImageButton)) {
-            ButtonType.BORIS -> selectedButtonIdBoris =
-                setNextButtonImage(selectedImageButton, buttonIdsBoris)
+            ButtonType.BORIS ->
+                selectedButtonIdBoris =
+                    setNextButtonImage(selectedImageButton, buttonIdsBoris)
 
-            ButtonType.LIAM -> selectedButtonIdLiam =
-                setNextButtonImage(selectedImageButton, buttonIdsLiam)
+            ButtonType.LIAM ->
+                selectedButtonIdLiam =
+                    setNextButtonImage(selectedImageButton, buttonIdsLiam)
 
-            ButtonType.DAVID -> selectedButtonIdDavid =
-                setNextButtonImage(selectedImageButton, buttonIdsDavid)
+            ButtonType.DAVID ->
+                selectedButtonIdDavid =
+                    setNextButtonImage(selectedImageButton, buttonIdsDavid)
 
-            ButtonType.THERESA -> selectedButtonIdTheresa =
-                setNextButtonImage(selectedImageButton, buttonIdsTheresa)
+            ButtonType.THERESA ->
+                selectedButtonIdTheresa =
+                    setNextButtonImage(selectedImageButton, buttonIdsTheresa)
 
-            ButtonType.JACOB -> selectedButtonIdJacob =
-                setNextButtonImage(selectedImageButton, buttonIdsJacob)
+            ButtonType.JACOB ->
+                selectedButtonIdJacob =
+                    setNextButtonImage(selectedImageButton, buttonIdsJacob)
         }
     }
 
     private fun determineButtonType(imageButton: ImageButton): ButtonType {
-        val buttonType: ButtonType = when {
-            buttonIdsBoris.contains(imageButton.id) -> {
-                ButtonType.BORIS
-            }
+        val buttonType: ButtonType =
+            when {
+                buttonIdsBoris.contains(imageButton.id) -> {
+                    ButtonType.BORIS
+                }
 
-            buttonIdsLiam.contains(imageButton.id) -> {
-                ButtonType.LIAM
-            }
+                buttonIdsLiam.contains(imageButton.id) -> {
+                    ButtonType.LIAM
+                }
 
-            buttonIdsDavid.contains(imageButton.id) -> {
-                ButtonType.DAVID
-            }
+                buttonIdsDavid.contains(imageButton.id) -> {
+                    ButtonType.DAVID
+                }
 
-            buttonIdsTheresa.contains(imageButton.id) -> {
-                ButtonType.THERESA
-            }
+                buttonIdsTheresa.contains(imageButton.id) -> {
+                    ButtonType.THERESA
+                }
 
-            else -> {
-                ButtonType.JACOB
+                else -> {
+                    ButtonType.JACOB
+                }
             }
-        }
 
         Timber.d(buttonType.toString())
         return buttonType
     }
 
-    fun setNextButtonImage(selectedImageButton: ImageButton, buttonIds: List<Int>): Int {
+    fun setNextButtonImage(
+        selectedImageButton: ImageButton,
+        buttonIds: List<Int>,
+    ): Int {
         for (buttonId in buttonIds) {
             findViewById<View>(buttonId).visibility = View.GONE
         }
@@ -297,7 +334,7 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
 
     private fun restoreButtonImage(
         selectedButtonId: Int,
-        buttonIds: List<Int>
+        buttonIds: List<Int>,
     ) {
         if (buttonIds.contains(selectedButtonId)) {
             for (buttonId in buttonIds) {
@@ -309,60 +346,69 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
     }
 
     private fun sharedPreferencesSave() {
-        val preferences = getSharedPreferences(this).edit()
+        getSharedPreferences(this).edit {
+            putInt(SharedPreferencesHelper.SELECTED_BUTTONID_BORIS, selectedButtonIdBoris)
+            Timber.d(String.format(Locale.UK, "selectedButtonIdBoris=%d", selectedButtonIdBoris))
 
-        preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_BORIS, selectedButtonIdBoris)
-        Timber.d(String.format(Locale.UK, "selectedButtonIdBoris=%d", selectedButtonIdBoris))
+            putInt(SharedPreferencesHelper.SELECTED_BUTTONID_LIAM, selectedButtonIdLiam)
+            Timber.d(String.format(Locale.UK, "selectedButtonIdLiam=%d", selectedButtonIdLiam))
 
-        preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_LIAM, selectedButtonIdLiam)
-        Timber.d(String.format(Locale.UK, "selectedButtonIdLiam=%d", selectedButtonIdLiam))
+            putInt(SharedPreferencesHelper.SELECTED_BUTTONID_DAVID, selectedButtonIdDavid)
+            Timber.d(String.format(Locale.UK, "selectedButtonIdDavid=%d", selectedButtonIdDavid))
 
-        preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_DAVID, selectedButtonIdDavid)
-        Timber.d(String.format(Locale.UK, "selectedButtonIdDavid=%d", selectedButtonIdDavid))
+            putInt(
+                SharedPreferencesHelper.SELECTED_BUTTONID_THERESA,
+                selectedButtonIdTheresa,
+            )
+            Timber.d(
+                String.format(
+                    Locale.UK,
+                    "selectedButtonIdTheresa=%d",
+                    selectedButtonIdTheresa,
+                ),
+            )
 
-        preferences.putInt(
-            SharedPreferencesHelper.SELECTED_BUTTONID_THERESA,
-            selectedButtonIdTheresa
-        )
-        Timber.d(String.format(Locale.UK, "selectedButtonIdTheresa=%d", selectedButtonIdTheresa))
-
-        preferences.putInt(SharedPreferencesHelper.SELECTED_BUTTONID_JACOB, selectedButtonIdJacob)
-        Timber.d(String.format(Locale.UK, "selectedButtonIdJacob=%d", selectedButtonIdJacob))
-
-        preferences.apply()
+            putInt(SharedPreferencesHelper.SELECTED_BUTTONID_JACOB, selectedButtonIdJacob)
+            Timber.d(String.format(Locale.UK, "selectedButtonIdJacob=%d", selectedButtonIdJacob))
+        }
     }
 
     private fun sharedPreferencesRestore() {
         val sharedPreferences = getSharedPreferences(this)
 
-        selectedButtonIdBoris = sharedPreferences.getInt(
-            SharedPreferencesHelper.SELECTED_BUTTONID_BORIS,
-            activityHomeBinding!!.imageButtonBoris00.id
-        )
+        selectedButtonIdBoris =
+            sharedPreferences.getInt(
+                SharedPreferencesHelper.SELECTED_BUTTONID_BORIS,
+                activityHomeBinding!!.imageButtonBoris00.id,
+            )
         restoreButtonImage(selectedButtonIdBoris, buttonIdsBoris)
 
-        selectedButtonIdLiam = sharedPreferences.getInt(
-            SharedPreferencesHelper.SELECTED_BUTTONID_LIAM,
-            activityHomeBinding!!.imageButtonLiam00.id
-        )
+        selectedButtonIdLiam =
+            sharedPreferences.getInt(
+                SharedPreferencesHelper.SELECTED_BUTTONID_LIAM,
+                activityHomeBinding!!.imageButtonLiam00.id,
+            )
         restoreButtonImage(selectedButtonIdLiam, buttonIdsLiam)
 
-        selectedButtonIdDavid = sharedPreferences.getInt(
-            SharedPreferencesHelper.SELECTED_BUTTONID_DAVID,
-            activityHomeBinding!!.imageButtonDavid00.id
-        )
+        selectedButtonIdDavid =
+            sharedPreferences.getInt(
+                SharedPreferencesHelper.SELECTED_BUTTONID_DAVID,
+                activityHomeBinding!!.imageButtonDavid00.id,
+            )
         restoreButtonImage(selectedButtonIdDavid, buttonIdsDavid)
 
-        selectedButtonIdTheresa = sharedPreferences.getInt(
-            SharedPreferencesHelper.SELECTED_BUTTONID_THERESA,
-            activityHomeBinding!!.imageButtonTheresa00.id
-        )
+        selectedButtonIdTheresa =
+            sharedPreferences.getInt(
+                SharedPreferencesHelper.SELECTED_BUTTONID_THERESA,
+                activityHomeBinding!!.imageButtonTheresa00.id,
+            )
         restoreButtonImage(selectedButtonIdTheresa, buttonIdsTheresa)
 
-        selectedButtonIdJacob = sharedPreferences.getInt(
-            SharedPreferencesHelper.SELECTED_BUTTONID_JACOB,
-            activityHomeBinding!!.imageButtonMogg00.id
-        )
+        selectedButtonIdJacob =
+            sharedPreferences.getInt(
+                SharedPreferencesHelper.SELECTED_BUTTONID_JACOB,
+                activityHomeBinding!!.imageButtonMogg00.id,
+            )
         restoreButtonImage(selectedButtonIdJacob, buttonIdsJacob)
     }
 }
