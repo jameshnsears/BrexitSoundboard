@@ -58,7 +58,6 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // 1. Enable Edge-to-Edge BEFORE super.onCreate
         enableEdgeToEdge()
 
         super.onCreate(savedInstanceState)
@@ -71,12 +70,15 @@ class ActivityBrexitSoundboard : AppCompatActivity() {
         val view: View = activityHomeBinding!!.root
         setContentView(view)
 
-        // 2. Handle System Bar Insets
-        // This ensures your content isn't cut off by the camera cutout or navigation bar
+        // 2. Refined Inset Handling
+        // Use the root view (activityHomeBinding!!.root) to apply padding
+        // so content isn't hidden behind system bars
         ViewCompat.setOnApplyWindowInsetsListener(view) { v, windowInsets ->
             val systemBars = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            // Apply padding to the root view so it respects the status/nav bar areas
+
+            // Apply padding to the view to avoid overlap with status/navigation bars
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+
             windowInsets
         }
 

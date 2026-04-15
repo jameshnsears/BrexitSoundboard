@@ -27,8 +27,8 @@ android {
         applicationId = "na.brexitsoundboard"
         minSdk = 23
         targetSdk = 36
-        versionCode = 342336
-        versionName = "1.11.0"
+        versionCode = 352336
+        versionName = "1.12.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments["clearPackageData"] = "true"
     }

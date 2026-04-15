@@ -1,1 +1,1 @@
-A simple Android App that plays memorable sound quotes from leading Conservative politicians that supported Brexit.
+Play memorable sound quotes from pro-Brexit Conservative politicians.

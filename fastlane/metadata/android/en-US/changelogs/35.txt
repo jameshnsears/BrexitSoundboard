@@ -1,2 +1,3 @@
-&bull; Updated codebase with various best practices
+&bull; Improve Edge to Edge support
+&bull; Latest screenshot assets
 &bull; Bump dependencies &amp; IDE: Android Studio Panda 2 | 2025.3.2
